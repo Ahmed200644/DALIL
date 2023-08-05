@@ -139,6 +139,9 @@ ul {
   .sidebar ul li a span {
     display: none;
   }
+  img.icon {
+    margin-left: -5px;
+  }
 }
 /* End Sidebar */
 /* Start Content */
@@ -236,6 +239,7 @@ ul {
 }
 .courses-page .course .cover {
   max-width: 100%;
+  border-bottom: 1px solid #ddd;
 }
 .courses-page .course .instructor {
   position: absolute;
