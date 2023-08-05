@@ -254,7 +254,6 @@ ul {
   text-overflow: ellipsis;
   transition: max-height 0.5s ease; /* Smooth transition for max-height change */
 }
-
 .courses-page .course .description::after {
   content: "";
   position: absolute;
