@@ -105,7 +105,8 @@ p.soon {
   box-shadow: 0 0 10px #ddd;
 }
 .sidebar h3 .logo {
-  width: 210px;
+  max-width: 100%;
+      height: auto;
 }
 .sidebar > h3::before,
 .sidebar > h3::after {
@@ -143,9 +144,17 @@ p.soon {
   margin-left: 10px;
 }
 @media (max-width: 767px) {
+  .logo {
+    content: url("../imgs/logo-removetext.png");
+    max-width: 100%;
+    margin-top: 5px;
+  }
   .sidebar {
     width: 58px;
     padding: 10px;
+  }
+  .sidebar ul{
+    margin-top: 30px;
   }
   .sidebar > h3 {
     font-size: 13px;
@@ -418,6 +427,10 @@ p.soon {
 }
 .team .box .data .social a .whatsapp:hover{
   color: var(--green-color);
+  z-index: 2;
+}
+.team .box .data .social a .gmail:hover{
+  color: var(--red-color);
   z-index: 2;
 }
 
