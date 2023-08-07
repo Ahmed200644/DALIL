@@ -494,7 +494,10 @@ img.aboutlogo {
   font-weight: bold;
   margin-bottom: 10px;
 }
-
+span.bigger {
+  font-size: 20px;
+  color: #006700;
+}
 @media (max-width: 767px) {
   img.aboutlogo {
     content: url("../imgs/logo-removetext.png");
