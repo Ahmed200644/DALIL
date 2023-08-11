@@ -180,12 +180,6 @@
           <div class="search p-relative">
             <input class="p-10" type="search" placeholder="Type A Keyword" />
           </div>
-          <div class="icons d-flex align-center">
-            <span class="notification p-relative">
-              <i class="fa-regular fa-bell fa-lg"></i>
-            </span>
-            <img src="imgs/avatar.png" alt="" />
-          </div>
         </div>
         <!-- End Head -->
         <h1 class="p-relative">Feedback</h1>
@@ -291,64 +285,88 @@
             </div>
           </div>
         </div>
-        <!-- Start Contact -->    
+        <!-- Start Contact -->
         <div class="contact" id="contact">
           <div class="main-heading">
-          <div class="container courses-page  m-20 gap-20">
-            <div class="content">
-              <form action="https://formspree.io/f/xgejaewe" method="POST">
-                <input class="main-input" type="text" name="name" placeholder="Your Name" />
-                <input class="main-input" type="number" min="0" max="5" name="rate" placeholder="Your Rate from 5 Stars" />
-                <input class="main-input" type="email" name="_replyto" placeholder="Your Email" />
-                <input class="main-input" type="file" name="photo" id="photo" placeholder="Your Photo" disabled/>
-                <textarea class="main-input" name="message" placeholder="Your Message"></textarea>
-                <input type="submit" value="Send Message" />
-              </form>
-              
-              <div class="info">
-                <h4>Give US your Openion</h4>
-                <h4>Get in touch</h4>
-                <span class="phone">+20 150 301 318</span>
-                <h4>Where We are</h4>
-                <address>
-                  munsha'at aleamari<br />Luxor<br />Egypt
-                </address>
+            <div class="container courses-page m-20 gap-20">
+              <div class="content">
+                <form action="https://formspree.io/f/xgejaewe" method="POST">
+                  <input
+                    class="main-input"
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                  />
+                  <input
+                    class="main-input"
+                    type="number"
+                    min="0"
+                    max="5"
+                    name="rate"
+                    placeholder="Your Rate from 5 Stars"
+                  />
+                  <input
+                    class="main-input"
+                    type="email"
+                    name="_replyto"
+                    placeholder="Your Email"
+                  />
+                  <input
+                    class="main-input"
+                    type="file"
+                    name="photo"
+                    id="photo"
+                    placeholder="Your Photo"
+                    disabled
+                  />
+                  <textarea
+                    class="main-input"
+                    name="message"
+                    placeholder="Your Message"
+                  ></textarea>
+                  <input type="submit" value="Send Message" />
+                </form>
+                <div class="info">
+                  <h4>Give US your Openion</h4>
+                  <h4>Get in touch</h4>
+                  <span class="phone">+20 150 301 318</span>
+                  <h4>Where We are</h4>
+                  <address>munsha'at aleamari<br />Luxor<br />Egypt</address>
+                </div>
               </div>
             </div>
           </div>
+          <!-- End Contact -->
+          <!-- End Testimonials -->
         </div>
-        <!-- End Contact -->
-        <!-- End Testimonials -->
       </div>
     </div>
     <script>
-document.addEventListener("DOMContentLoaded", function () {
-  var form = document.querySelector("#contact form");
-  var formStatus = document.createElement("div");
-  form.appendChild(formStatus);
+      document.addEventListener("DOMContentLoaded", function () {
+        var form = document.querySelector("#contact form");
+        var formStatus = document.createElement("div");
+        form.appendChild(formStatus);
 
-  form.onsubmit = function (e) {
-    e.preventDefault();
-    var data = new FormData(form);
-    var xhr = new XMLHttpRequest();
+        form.onsubmit = function (e) {
+          e.preventDefault();
+          var data = new FormData(form);
+          var xhr = new XMLHttpRequest();
 
-    xhr.open(form.method, form.action, true);
-    xhr.setRequestHeader("Accept", "application/json");
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState !== XMLHttpRequest.DONE) return;
-      if (xhr.status === 200) {
-        form.reset();
-        formStatus.innerHTML = "Thank you for your message!";
-      } else {
-        formStatus.innerHTML = "Oops! Something went wrong.";
-      }
-    };
+          xhr.open(form.method, form.action, true);
+          xhr.setRequestHeader("Accept", "application/json");
+          xhr.onreadystatechange = function () {
+            if (xhr.readyState !== XMLHttpRequest.DONE) return;
+            if (xhr.status === 200) {
+              form.reset();
+              formStatus.innerHTML = "Thank you for your message!";
+            } else {
+              formStatus.innerHTML = "Oops! Something went wrong.";
+            }
+          };
 
-    xhr.send(data);
-  };
-});
-
+          xhr.send(data);
+        };
+      });
     </script>
-    
   </body>
 </html>
