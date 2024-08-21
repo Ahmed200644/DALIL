@@ -1,0 +1,6 @@
+# Allow all user agents to access all pages
+User-agent: *
+Disallow:
+
+# Specify the location of the sitemap
+Sitemap: https://dalil-nu.vercel.app/sitemap.xml
