@@ -4,5 +4,3 @@ Disallow:
 
 # Specify the location of the sitemap
 Sitemap: https://dalil-nu.vercel.app/sitemap.xml
-
-google-site-verification=p0_2O4X2xiJGRc4-SZTLR0lq49KMxSFuykuQSmADgbM
